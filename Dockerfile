@@ -1,5 +1,5 @@
 FROM python:3.9
 WORKDIR /backend
-RUN pip3 install --upgrade pip ipython
+RUN pip3 install --upgrade pip jupyter
 COPY . /backend
-CMD ipython -c "%run aboba.ipynb"
+CMD jupyter nbconvert --to python ./aboba.ipynb
